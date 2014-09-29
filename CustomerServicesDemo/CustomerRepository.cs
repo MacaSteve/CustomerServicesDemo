@@ -17,9 +17,9 @@ namespace CustomerServicesDemo
             return cust;
         }
 
-        public static Customer ReadCustomer(int custId)
+        public static Customer ReadCustomer(int? custId)
         {
-            return _customers.FirstOrDefault(cust => cust.CustomerId == custId);
+            return _customers.FirstOrDefault(cust => cust.CustomerId == (custId ?? -1));
         }
 
         public static List<Customer> Read()

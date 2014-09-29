@@ -18,12 +18,7 @@ namespace CustomerServicesDemo
             if (customer.CustomerId == null)
                 return CustomerRepository.Read();
 
-            return CustomerRepository.ReadCustomer(customer.CustomerId ?? -1);
-        }
-
-        public object Get()
-        {
-            return CustomerRepository.Read();
+            return CustomerRepository.ReadCustomer(customer.CustomerId);
         }
 
         public object Put(Customer customer)
