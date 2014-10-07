@@ -29,7 +29,7 @@ namespace CustomerServicesDemo
 
         public static Customer Update(Customer cust)
         {
-            var customer = _customers.FirstOrDefault(c => cust.CustomerId == cust.CustomerId);
+            var customer = _customers.FirstOrDefault(c => c.CustomerId == cust.CustomerId);
             customer.Name = cust.Name;
             customer.Phone = cust.Phone;
             customer.Address = cust.Address;
